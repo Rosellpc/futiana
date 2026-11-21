@@ -28,16 +28,16 @@ export default function About() {
         <section
             id="nosotros"
             aria-labelledby="about-title"
-            className="border-t border-white/10"
+            className="about-section border-t border-white/10"
         >
             <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 lg:py-32">
                 <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-                    <Reveal className="min-w-o">
+                    <Reveal className="min-w-0">
                         <p className="section-label">Nosotros · Futiana</p>
 
                         <h2
                             id="about-title"
-                            className="mt-4 text-4xl font-semibold leading-tight tracking-tight md:text-5xl"
+                            className="section-title mt-4 text-4xl font-semibold leading-tight tracking-tight md:text-5xl"
                         >
                             La tecnología empieza
                             <span className="block text-white/60">
@@ -61,14 +61,14 @@ export default function About() {
 
                         </div>
 
-                        <a href="#como-trabajamos" className="glass glass-button mt-8 inline-flex text-sm font-medium"> Conoce nuestro proceso <span aria-hidden="true">↗</span></a>      
+                        <a href="#como-trabajamos" className="glass glass-button mt-8 inline-flex text-sm font-medium">Conoce nuestro proceso</a>
                     </Reveal>
 
                     <Reveal delay={0.1} className="min-w-0">
                         <figure>
                             <div className="relative isolate aspect-[4/5] overflow-hidden rounded-3xl border border-white/15">
                                 <Image
-                                    src="/images/futiana.jpeg"
+                                    src="/images/futiana.png"
                                     alt="Interior de una oficina de inspiración con mesas de madera y divisiones de cristal."
                                     fill
                                     sizes="(min-width: 1280px) 560px, (min-width: 1024px) 50vw, 100vw"
@@ -151,7 +151,6 @@ export default function About() {
 
                             <a href="#inicio" className="mt-6 inline-flex items-center gap-2 text-sm text-white/85 underline underline-offset-4 hover:text-white">
                                 Ver la presentación de Futiana
-                                <span aria-hidden="true">↗</span>
                             </a>
                         </div>
                     </div>

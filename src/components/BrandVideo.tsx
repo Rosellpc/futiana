@@ -31,12 +31,18 @@ export default function BrandVideo() {
                          focus-visible:outline-2 focus-visible:outline-white
                          focus-visible:outline-offset-[-6px]"
             >
-
+              <Image
+                src="/images/futiana.png"
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover"
+              />
 
               <span
                 aria-hidden="true"
-                className="absolute inset-0 bg-black/50
-                           transition-colors group-hover:bg-black/40
+                className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/20
+                           transition-colors group-hover:from-black/65
                            motion-reduce:transition-none"
               />
 
@@ -68,9 +74,6 @@ export default function BrandVideo() {
         </div>
       </div>
 
-      <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-3 px-2">
-
-      </figcaption>
     </figure>
   );
 }

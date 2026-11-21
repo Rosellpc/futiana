@@ -72,7 +72,7 @@ export default function HowWeWork() {
     <section
       id="como-trabajamos"
       aria-labelledby="process-title"
-      className="border-t border-white/10"
+      className="process-section border-t border-white/10"
     >
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 lg:py-32">
         <header className="max-w-3xl">
@@ -101,11 +101,11 @@ export default function HowWeWork() {
             aria-hidden="true"
             className="sticky top-28 hidden text-center lg:block"
           >
-            <p className="text-xs uppercase tracking-[0.2em] text-white/50">
+            <p className="section-label text-sm">
               Nuestro proceso
             </p>
 
-            <p className="mt-5 text-[140px] font-semibold leading-none tracking-tighter tabular-nums">
+            <p className="process-index mt-5 text-[clamp(5rem,13vw,9rem)] font-semibold leading-none tracking-tighter tabular-nums">
               {currentStep.number}
             </p>
 
@@ -118,7 +118,7 @@ export default function HowWeWork() {
                 <span
                   key={step.number}
                   className={`h-1 w-8 rounded-full transition-colors motion-reduce:transition-none ${
-                    index === activeStep ? "bg-white" : "bg-white/20"
+                    index === activeStep ? "bg-[var(--color-copper)]" : "bg-white/20"
                   }`}
                 />
               ))}
@@ -144,7 +144,7 @@ export default function HowWeWork() {
                       : ""
                   }`}
                 >
-                  <p className="text-sm tracking-[0.15em] text-white/60">
+                  <p className="process-step-number text-sm tracking-[0.15em]">
                     {step.number}
                   </p>
 
@@ -160,7 +160,7 @@ export default function HowWeWork() {
                   </p>
 
                   <div className="mt-7 border-t border-white/10 pt-5">
-                    <p className="text-xs uppercase tracking-[0.18em] text-white/50">
+                    <p className="text-sm font-medium uppercase tracking-[0.16em] text-white/60">
                       Qué obtienes
                     </p>
 
