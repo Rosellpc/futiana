@@ -1,4 +1,4 @@
-import Image from "next/image";
+import HeroBackground from "@/components/HeroBackground";
 import Navbar from "@/components/Navbar";
 import BrandVideo from "@/components/BrandVideo";
 import Reveal from "@/components/Reveal";
@@ -37,18 +37,7 @@ export default function Home() {
       </a>
 
       <section className="hero-section relative isolate flex min-h-svh flex-col">
-        <div className="absolute inset-0 -z-10" aria-hidden="true">
-          <Image
-            src="/images/futiana.png"
-            alt=""
-            fill
-            sizes="100vw"
-            loading="eager"
-            className="object-cover object-center"
-          />
-          <div className="hero-shade absolute inset-0" />
-          <div className="hero-glow absolute inset-0" />
-        </div>
+        <HeroBackground />
 
         <Navbar />
 
