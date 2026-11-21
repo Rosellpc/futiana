@@ -36,7 +36,7 @@ export default function Home() {
         Saltar al contenido
       </a>
 
-      <section className="hero-section relative isolate min-h-svh">
+      <section className="hero-section relative isolate flex min-h-svh flex-col">
         <div className="absolute inset-0 -z-10" aria-hidden="true">
           <Image
             src="/images/futiana.png"
@@ -54,12 +54,10 @@ export default function Home() {
 
         <div
           id="contenido"
-          className="mx-auto max-w-7xl px-6 pb-20 pt-16 md:px-10 lg:pt-24"
+          className="grid flex-1 content-center items-center justify-items-center gap-y-10 px-6 py-12 md:px-10 lg:grid-cols-2 lg:gap-0 lg:px-0 lg:py-16"
         >
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-
             {/* Columna izquierda: presentación */}
-            <Reveal className="min-w-0">
+            <Reveal className="w-full min-w-0 max-w-[44rem] lg:w-[88%]">
               <p className="hero-kicker mb-7 text-xs uppercase tracking-[0.22em]">
                 Tecnología para la gastronomía
               </p>
@@ -68,7 +66,7 @@ export default function Home() {
                 className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
                           tracking-tight sm:text-6xl xl:text-7xl"
               >
-                El futuro empieza con un ADN de Software en el núcleo de tu empresa.
+                El futuro empieza con Software en el núcleo de tu empresa.
               </h1>
 
               <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed text-white/80">
@@ -77,23 +75,22 @@ export default function Home() {
               </p>
 
               <div className="mt-9 flex flex-wrap gap-4">
-                  <a href="#soluciones" className="glass-button button-primary">
-                    Explorar soluciones
+                <a href="#soluciones" className="glass-button button-primary">
+                  Explorar soluciones
                 </a>
 
                 <a href="#nosotros" className="glass-button button-secondary">
                   Conocer futiana
                 </a>
               </div>
+
+              <p className="hero-caption mt-8 text-xs uppercase tracking-[0.18em]">
+                Diseño <span>·</span> Desarrollo <span>·</span> Automatización
+              </p>
             </Reveal>
 
             {/* Columna derecha: video */}
             <BrandVideo />
-          </div>
-
-          <p className="hero-caption mt-16 text-xs uppercase tracking-[0.18em]">
-            Diseño <span>·</span> Desarrollo <span>·</span> Automatización
-          </p>
         </div>
       </section>
 

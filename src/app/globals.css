@@ -34,9 +34,9 @@ section[id] {
 .hero-shade {
   background: linear-gradient(
     90deg,
-    rgb(12 12 11 / 94%) 0%,
-    rgb(12 12 11 / 78%) 46%,
-    rgb(12 12 11 / 28%) 100%
+    rgb(12 12 11 / 80%) 0%,
+    rgb(12 12 11 / 70%) 46%,
+    rgb(12 12 11 / 18%) 100%
   );
 }
 
@@ -138,15 +138,46 @@ section[id] {
   color: var(--color-paper);
 }
 
+.navbar-glass {
+  border: 1px solid rgb(255 255 255 / 46%);
+  background-color: #d0cbc3;
+  background-image: linear-gradient(155deg, rgb(255 255 255 / 25%), transparent 42%, rgb(255 255 255 / 10%));
+  box-shadow:
+    inset 0 1px 1px rgb(255 255 255 / 66%),
+    inset 0 -1px 2px rgb(255 255 255 / 24%),
+    0 10px 32px rgb(0 0 0 / 20%);
+}
+
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .navbar-glass {
+    background-color: rgb(241 238 231 / 40%);
+    -webkit-backdrop-filter: blur(24px) saturate(130%);
+    backdrop-filter: blur(24px) saturate(130%);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .navbar-glass {
+    background-color: #d0cbc3;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+.navbar-glass a:focus-visible {
+  outline: 2px solid #34271f;
+  outline-offset: 3px;
+}
+
 .nav-cta {
   display: inline-flex;
   min-height: 42px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(230 167 109 / 55%);
+  border: 1px solid rgb(58 42 30 / 56%);
   border-radius: 999px;
   padding: 0.65rem 1rem;
-  color: var(--color-copper);
+  color: #38291f;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -154,8 +185,8 @@ section[id] {
 }
 
 .nav-cta:hover {
-  background: var(--color-copper);
-  color: #20150e;
+  background: #38291f;
+  color: var(--color-paper);
 }
 
 .brand-wordmark {
@@ -182,13 +213,15 @@ section[id] {
 }
 
 .nav-link {
-  color: rgb(241 238 231 / 72%);
+  color: #28231f;
   text-decoration: none;
   transition: color 180ms ease;
 }
 
 .nav-link:hover {
-  color: var(--color-copper);
+  color: #46301f;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
 }
 
 .section-label {

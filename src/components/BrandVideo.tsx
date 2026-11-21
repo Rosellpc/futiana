@@ -9,9 +9,7 @@ export default function BrandVideo() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <figure className="w-full min-w-0">
-      <div className="glass overflow-hidden rounded-3xl p-2 md:p-3">
-        <div className="relative aspect-video min-h-[200px] overflow-hidden rounded-2xl bg-black">
+    <figure className="relative aspect-video w-full min-w-0 max-w-[44rem] overflow-hidden bg-black lg:w-[88%]">
           {isPlaying ? (
             <iframe
               src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&playsinline=1&hl=es`}
@@ -35,7 +33,7 @@ export default function BrandVideo() {
                 src="/images/futiana.png"
                 alt=""
                 fill
-                sizes="(min-width: 1024px) 45vw, 100vw"
+                sizes="(min-width: 1600px) 704px, (min-width: 1024px) 44vw, (min-width: 784px) 704px, 100vw"
                 className="object-cover"
               />
 
@@ -46,9 +44,9 @@ export default function BrandVideo() {
                            motion-reduce:transition-none"
               />
 
-              <span className="relative flex flex-col items-center gap-4 px-6">
+              <span className="relative flex flex-col items-center gap-2 px-4 sm:gap-4">
                 <span
-                  className="glass flex h-16 w-16 items-center
+                  className="glass flex h-12 w-12 items-center sm:h-16 sm:w-16
                              justify-center rounded-full text-white"
                 >
                   <svg
@@ -71,9 +69,6 @@ export default function BrandVideo() {
               </span>
             </button>
           )}
-        </div>
-      </div>
-
     </figure>
   );
 }

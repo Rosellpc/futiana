@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import CurrentYear from "@/components/CurrentYear";
 
 const navigation = [
@@ -18,9 +19,15 @@ export default function Footer() {
             <Link
               href="/#inicio"
               aria-label="Futiana — inicio"
-              className="text-4xl font-semibold tracking-tight"
+              className="inline-flex items-center"
             >
-              futiana
+              <Image
+                src="/brand/Gold%20Futiana-Logo.png"
+                alt=""
+                width={240}
+                height={80}
+                className="h-14 w-42 object-contain object-left"
+              />
             </Link>
 
             <p className="mt-5 max-w-sm text-base leading-relaxed text-white/75">
