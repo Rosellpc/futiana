@@ -31,15 +31,13 @@ const solutions = [
 export default function Home() {
   return (
     <>
-      <main id="inicio" className="site-shell text-white">
       <a href="#contenido" className="skip-link">
         Saltar al contenido
       </a>
-
-      <section className="hero-section relative isolate flex min-h-svh flex-col">
+      <Navbar />
+      <main className="site-shell text-white">
+      <section id="inicio" className="hero-section relative isolate flex min-h-svh flex-col">
         <HeroBackground />
-
-        <Navbar />
 
         <div
           id="contenido"
@@ -63,7 +61,7 @@ export default function Home() {
                 que conectan tu operación y cuidan cada momento del servicio.
               </p>
 
-              <div className="mt-9 flex flex-wrap gap-4">
+              <div className="mt-8 grid gap-3 min-[28rem]:flex min-[28rem]:flex-wrap">
                 <a href="#soluciones" className="glass-button button-primary">
                   Explorar soluciones
                 </a>
@@ -86,7 +84,7 @@ export default function Home() {
       <section
         id="soluciones"
         aria-labelledby="solutions-title"
-        className="solutions-section mx-auto max-w-7xl px-6 py-24 md:px-10 lg:py-32"
+        className="solutions-section mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-24 lg:py-32"
       >
         <p className="section-label">Lo que hacemos</p>
 
@@ -97,7 +95,7 @@ export default function Home() {
           Cada detalle, conectado.
         </h2>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(100%,16rem),1fr))] gap-5 md:mt-12">
           {solutions.map((solution, index) => (
             <Reveal
               key={solution.number}

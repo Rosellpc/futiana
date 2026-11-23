@@ -74,7 +74,7 @@ export default function HowWeWork() {
       aria-labelledby="process-title"
       className="process-section border-t border-white/10"
     >
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-24 lg:py-32">
         <header className="max-w-3xl">
           <p className="section-label">Cómo trabajamos</p>
 

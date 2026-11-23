@@ -30,7 +30,7 @@ export default function About() {
             aria-labelledby="about-title"
             className="about-section border-t border-white/10"
         >
-            <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 lg:py-32">
+            <div className="mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-24 lg:py-32">
                 <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                     <Reveal className="min-w-0">
                         <p className="section-label">Nosotros · Futiana</p>
@@ -81,7 +81,7 @@ export default function About() {
                                 />
 
                                 <div className="absolute inset-x-5 bottom-5 md:inset-x-7 md:bottom-7">
-                                    <div className="glass rounded-2xl p-5 md:p-6">
+                                    <div className="glass about-photo-card rounded-2xl p-5 md:p-6">
                                         <p className="text-xs uppercase tracking-[0.2em] text-white/70">Nuestra perspectiva</p>
 
                                         <p className="mt-3 text-2xl font-medium leading-snug tracking-tight">Criterio de innovación.
@@ -107,7 +107,7 @@ export default function About() {
                         </h3>
                     </Reveal>
 
-                    <div className="mt-8 grid gap-5 md:grid-cols-3">
+                    <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(100%,16rem),1fr))] gap-5">
                         {principles.map((principle, index) => (
                             <Reveal
                                 key={principle.number}
