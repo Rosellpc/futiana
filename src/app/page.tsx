@@ -44,7 +44,7 @@ export default function Home() {
           className="grid flex-1 content-center items-center justify-items-center gap-y-10 px-6 py-12 md:px-10 lg:grid-cols-2 lg:gap-0 lg:px-0 lg:py-16"
         >
             {/* Columna izquierda: presentación */}
-            <Reveal className="w-full min-w-0 max-w-[44rem] lg:w-[88%]">
+            <Reveal className="hero-card glass w-full min-w-0 max-w-[44rem] lg:w-[88%]">
               <p className="hero-kicker mb-7 text-xs uppercase tracking-[0.22em]">
                 Tecnología para la gastronomía
               </p>
@@ -56,7 +56,7 @@ export default function Home() {
                 El futuro empieza con Software en el núcleo de tu empresa.
               </h1>
 
-              <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed text-white/80">
+              <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed">
                 Diseñamos software, experiencias y automatizaciones con modelos de LLMs
                 que conectan tu operación y cuidan cada momento del servicio.
               </p>

@@ -28,8 +28,6 @@ export default function HeroBackground() {
           className="object-cover object-center"
         />
       </motion.div>
-      <div className="hero-shade absolute inset-0" />
-      <div className="hero-glow absolute inset-0" />
     </div>
   );
 }

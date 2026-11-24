@@ -45,7 +45,7 @@ export default function BrandVideo() {
 
         <span className="relative flex flex-col items-center gap-2 px-4 sm:gap-4">
           <span
-            className="glass flex h-12 w-12 items-center sm:h-16 sm:w-16
+            className="hero-play glass flex h-12 w-12 items-center sm:h-16 sm:w-16
                        justify-center rounded-full text-white"
           >
             <svg

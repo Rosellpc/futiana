@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { DM_Sans } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
+
+const navFont = DM_Sans({ subsets: ["latin"], preload: false });
 
 const contact = { id: "contacto", label: "Hablemos", path: "M21 11a8 8 0 0 1-8 8H8l-5 3 1.3-5.5A8 8 0 0 1 11 3h2a8 8 0 0 1 8 8Z" };
 const items = [
@@ -73,28 +76,30 @@ export default function Navbar() {
             if (active !== id) destination.current = id;
             setActive(id);
           }}
-          className={id === "contacto" ? "dock-contact" : id === "inicio" ? "dock-home" : undefined}>
+          className={id === "contacto" ? "dock-contact" : id === "inicio" ? "dock-home" : "dock-section-link"}>
           {desktop && id === "inicio" && (
             <Image src="/brand/Black%20Futiana-Logo.png" alt="" width={108} height={36}
-              className="hidden h-9 w-[108px] object-contain md:block" />
+              className="h-9 w-[108px] object-contain" />
           )}
-          <span className="dock-icon">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none"
-              stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-              <path d={path} />
-            </svg>
-          </span>
-          {id !== "contacto" && (
-            <span className="dock-label">{desktop && id === "como-trabajamos" ? "Cómo trabajamos" : label}</span>
+          {(!desktop || id !== "inicio") && (
+            <span className="dock-icon">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none"
+                stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                <path d={path} />
+              </svg>
+            </span>
+          )}
+          {id !== "contacto" && !(desktop && id === "inicio") && (
+            <span className="dock-label">{desktop && id === "como-trabajamos" ? "Procesos" : label}</span>
           )}
         </a>
     ));
   }
 
   return (
-    <nav aria-label="Navegación principal" className="site-nav">
-      <div className="contents md:hidden">{renderLinks(items)}</div>
-      <div className="hidden md:contents">{renderLinks(desktopItems, true)}</div>
+    <nav aria-label="Navegación principal" className="site-nav glass">
+      <div className="dock-mobile-links">{renderLinks(items)}</div>
+      <div className={`dock-desktop-links ${navFont.className}`}>{renderLinks(desktopItems, true)}</div>
     </nav>
   );
 }
