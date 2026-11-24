@@ -44,24 +44,27 @@ export default function Home() {
           className="grid flex-1 content-center items-center justify-items-center gap-y-10 px-6 py-12 md:px-10 lg:grid-cols-2 lg:gap-0 lg:px-0 lg:py-16"
         >
             {/* Columna izquierda: presentación */}
-            <Reveal className="hero-card glass w-full min-w-0 max-w-[44rem] lg:w-[88%]">
-              <p className="hero-kicker mb-7 text-xs uppercase tracking-[0.22em]">
+            <div className="grid w-full min-w-0 max-w-[44rem] gap-4 lg:w-[88%]">
+              <p className="hero-kicker glass max-w-full justify-self-start rounded-full px-5 py-3 uppercase tracking-[0.22em]">
                 Tecnología para la gastronomía
               </p>
 
-              <h1
-                className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
-                          tracking-tight sm:text-6xl xl:text-7xl"
-              >
-                El futuro empieza con Software en el núcleo de tu empresa.
-              </h1>
+              <Reveal className="hero-card glass">
+                <h1
+                  className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
+                            tracking-tight sm:text-6xl xl:text-7xl"
+                >
+                  El futuro empieza con Software en el núcleo de tu empresa.
+                </h1>
 
-              <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed">
-                Diseñamos software, experiencias y automatizaciones con modelos de LLMs
-                que conectan tu operación y cuidan cada momento del servicio.
-              </p>
+                <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed">
+                  Diseñamos software, experiencias y automatizaciones con modelos de LLMs
+                  que conectan tu operación y cuidan cada momento del servicio.
+                </p>
 
-              <div className="mt-8 grid gap-3 min-[28rem]:flex min-[28rem]:flex-wrap">
+              </Reveal>
+
+              <div className="hero-actions glass grid gap-3 rounded-3xl p-2 min-[28rem]:flex min-[28rem]:flex-wrap min-[28rem]:justify-self-start min-[28rem]:rounded-full">
                 <a href="#soluciones" className="glass-button button-primary">
                   Explorar soluciones
                 </a>
@@ -71,10 +74,10 @@ export default function Home() {
                 </a>
               </div>
 
-              <p className="hero-caption mt-8 text-xs uppercase tracking-[0.18em]">
+              <p className="hero-caption glass max-w-full justify-self-start rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em]">
                 Diseño <span>·</span> Desarrollo <span>·</span> Automatización
               </p>
-            </Reveal>
+            </div>
 
             {/* Columna derecha: video */}
             <BrandVideo />

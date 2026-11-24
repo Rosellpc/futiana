@@ -83,14 +83,14 @@ html:has(.video-lightbox[open]) {
   color: var(--glass-ink);
 }
 
-.hero-card.glass {
+:is(.hero-card, .hero-actions, .hero-caption).glass {
   --glass-ink: var(--color-paper);
   --glass-muted: color-mix(in srgb, var(--color-paper) 80%, var(--color-muted));
   --glass-accent: var(--color-copper);
 }
 
 .hero-kicker {
-  color: var(--glass-accent);
+  color: var(--color-copper);
   font-size: 0.82rem;
   font-weight: 600;
 }
@@ -366,7 +366,10 @@ html:has(.site-nav) {
 
 @media (prefers-reduced-transparency: reduce) {
   .site-nav,
-  .hero-card {
+  .hero-kicker,
+  .hero-card,
+  .hero-actions,
+  .hero-caption {
     background: var(--glass-solid);
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
