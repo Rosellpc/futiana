@@ -16,15 +16,14 @@ export default function BrandVideo() {
   }
 
   return (
-    <figure className="relative aspect-video w-full min-w-0 max-w-[44rem] overflow-hidden bg-black lg:w-[88%]">
+    <figure className="relative mt-4 aspect-video w-full min-w-0 overflow-hidden rounded-[1.75rem] bg-black lg:col-start-2 lg:row-start-2 lg:mt-0 lg:aspect-auto lg:min-h-64 lg:self-stretch">
       <button
         ref={trigger}
         type="button"
         onClick={openPlayer}
         aria-haspopup="dialog"
-        aria-label="Reproducir la presentación de futiana en YouTube"
-        className="group absolute inset-0 flex w-full cursor-pointer
-                   items-center justify-center
+        aria-label="Descubre Futiana: reproducir la presentación"
+        className="absolute inset-0 grid w-full cursor-pointer place-items-center
                    focus-visible:outline-2 focus-visible:outline-white
                    focus-visible:outline-offset-[-6px]"
       >
@@ -32,38 +31,26 @@ export default function BrandVideo() {
           src="/images/futiana.png"
           alt=""
           fill
-          sizes="(min-width: 1600px) 704px, (min-width: 1024px) 44vw, (min-width: 784px) 704px, 100vw"
+          sizes="(min-width: 1024px) min(45vw, 600px), (min-width: 768px) 688px, calc(100vw - 48px)"
           className="object-cover"
         />
 
         <span
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/20
-                     transition-colors group-hover:from-black/65
-                     motion-reduce:transition-none"
+          className="absolute inset-0 bg-black/45"
         />
 
-        <span className="relative flex flex-col items-center gap-2 px-4 sm:gap-4">
-          <span
-            className="hero-play glass flex h-12 w-12 items-center sm:h-16 sm:w-16
-                       justify-center rounded-full text-white"
+        <span className="hero-play glass relative grid size-12 place-items-center rounded-full sm:size-14">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="ml-1 h-7 w-7"
           >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="ml-1 h-7 w-7"
-            >
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </span>
-
-          <span className="text-lg font-medium text-white">
-            Descubre futiana
-          </span>
-
-          <span className="text-sm text-white/80">
-            Ver presentación en YouTube
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          <span className="absolute top-full mt-2 w-max text-base font-medium text-white sm:text-lg">
+            Descubre Futiana
           </span>
         </span>
       </button>

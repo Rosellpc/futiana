@@ -41,46 +41,46 @@ export default function Home() {
 
         <div
           id="contenido"
-          className="grid flex-1 content-center items-center justify-items-center gap-y-10 px-6 py-12 md:px-10 lg:grid-cols-2 lg:gap-0 lg:px-0 lg:py-16"
+          className="hero-panel glass mx-auto my-auto grid w-[calc(100%-2rem)] max-w-3xl grid-cols-1 rounded-[2rem] p-3 sm:w-[calc(100%-4rem)] sm:p-6 lg:max-w-[90rem] lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-8 lg:p-8"
         >
-            {/* Columna izquierda: presentación */}
-            <div className="grid w-full min-w-0 max-w-[44rem] gap-4 lg:w-[88%]">
-              <p className="hero-kicker glass max-w-full justify-self-start rounded-full px-5 py-3 uppercase tracking-[0.22em]">
-                Tecnología para la gastronomía
-              </p>
+          <p className="hero-kicker glass mb-3 max-w-full justify-self-start rounded-full px-5 py-3 uppercase tracking-[0.22em]">
+            Tecnología para la gastronomía
+          </p>
 
-              <Reveal className="hero-card glass">
-                <h1
-                  className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
-                            tracking-tight sm:text-6xl xl:text-7xl"
-                >
-                  El futuro empieza con Software en el núcleo de tu empresa.
-                </h1>
+          <Reveal className="hero-card glass min-w-0 lg:col-start-1 lg:row-start-2">
+            <h1
+              className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
+                        tracking-tight sm:text-6xl xl:text-7xl"
+            >
+              El futuro empieza con Software en el núcleo de tu empresa.
+            </h1>
 
-                <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed">
-                  Diseñamos software, experiencias y automatizaciones con modelos de LLMs
-                  que conectan tu operación y cuidan cada momento del servicio.
-                </p>
+            <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed">
+              Diseñamos software, experiencias y automatizaciones con modelos de LLMs
+              que conectan tu operación y cuidan cada momento del servicio.
+            </p>
+          </Reveal>
 
-              </Reveal>
+          <div className="hero-actions glass mt-4 grid gap-3 rounded-3xl p-2 min-[28rem]:flex min-[28rem]:flex-wrap min-[28rem]:justify-self-start min-[28rem]:rounded-full lg:col-start-1 lg:row-start-3">
+            <a href="#soluciones" className="glass-button button-primary">
+              Explorar soluciones
+            </a>
 
-              <div className="hero-actions glass grid gap-3 rounded-3xl p-2 min-[28rem]:flex min-[28rem]:flex-wrap min-[28rem]:justify-self-start min-[28rem]:rounded-full">
-                <a href="#soluciones" className="glass-button button-primary">
-                  Explorar soluciones
-                </a>
+            <a href="#nosotros" className="glass-button button-secondary">
+              Conocer futiana
+            </a>
+          </div>
 
-                <a href="#nosotros" className="glass-button button-secondary">
-                  Conocer futiana
-                </a>
-              </div>
+          <BrandVideo />
 
-              <p className="hero-caption glass max-w-full justify-self-start rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em]">
-                Diseño <span>·</span> Desarrollo <span>·</span> Automatización
-              </p>
-            </div>
+          <a href="#contacto" className="glass-button button-primary mt-4 justify-self-center self-center lg:col-start-2 lg:row-start-3">
+            Agendar una reunión
+          </a>
 
-            {/* Columna derecha: video */}
-            <BrandVideo />
+          <p className="hero-caption glass mt-6 max-w-full justify-self-start rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em] lg:col-start-1 lg:row-start-4">
+            Diseño <span>·</span> Desarrollo <span>·</span> Automatización
+          </p>
+
         </div>
       </section>
 
