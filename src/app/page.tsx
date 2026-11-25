@@ -41,46 +41,48 @@ export default function Home() {
 
         <div
           id="contenido"
-          className="hero-panel glass mx-auto my-auto grid w-[calc(100%-2rem)] max-w-3xl grid-cols-1 rounded-[2rem] p-3 sm:w-[calc(100%-4rem)] sm:p-6 lg:max-w-[90rem] lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-8 lg:p-8"
+          className="hero-content mx-auto my-auto grid w-[calc(100%-2rem)] max-w-3xl gap-4 sm:w-[calc(100%-4rem)] lg:max-w-[90rem]"
         >
-          <p className="hero-kicker glass mb-3 max-w-full justify-self-start rounded-full px-5 py-3 uppercase tracking-[0.22em]">
-            Tecnología para la gastronomía
-          </p>
 
-          <Reveal className="hero-card glass min-w-0 lg:col-start-1 lg:row-start-2">
-            <h1
-              className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
-                        tracking-tight sm:text-6xl xl:text-7xl"
-            >
-              El futuro empieza con Software en el núcleo de tu empresa.
-            </h1>
-
-            <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed">
-              Diseñamos software, experiencias y automatizaciones con modelos de LLMs
-              que conectan tu operación y cuidan cada momento del servicio.
+          <div className="hero-panel glass grid w-full grid-cols-1 rounded-[2rem] p-3 sm:p-6 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-8 lg:p-8">
+            <p className="hero-label mb-3 max-w-full justify-self-start rounded-full uppercase">
+              Tecnología para la gastronomía
             </p>
-          </Reveal>
 
-          <div className="hero-actions glass mt-4 grid gap-3 rounded-3xl p-2 min-[28rem]:flex min-[28rem]:flex-wrap min-[28rem]:justify-self-start min-[28rem]:rounded-full lg:col-start-1 lg:row-start-3">
-            <a href="#soluciones" className="glass-button button-primary">
-              Explorar soluciones
-            </a>
+            <Reveal className="hero-card glass min-w-0 lg:col-start-1 lg:row-start-2">
+              <h1
+                className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
+                          tracking-tight sm:text-6xl xl:text-7xl"
+              >
+                El futuro empieza con Software en el núcleo de tu empresa.
+              </h1>
 
-            <a href="#nosotros" className="glass-button button-secondary">
-              Conocer futiana
+              <p className="hero-copy mt-7 max-w-xl text-lg leading-relaxed">
+                Diseñamos software, experiencias y automatizaciones con modelos de LLMs
+                que conectan tu operación y cuidan cada momento del servicio.
+              </p>
+            </Reveal>
+
+            <div className="hero-actions mt-4 grid gap-3 p-2 min-[28rem]:flex min-[28rem]:flex-wrap min-[28rem]:justify-self-start lg:col-start-1 lg:row-start-3">
+              <a href="#soluciones" className=" hero-meeting button-primary glass-button glass">
+                Explorar soluciones
+              </a>
+
+              <a href="#nosotros" className="glass-button button-secondary">
+                Conocer futiana
+              </a>
+            </div>
+
+            <BrandVideo />
+
+            <p className="hero-label hero-caption w-full rounded-full text-center uppercase">
+              Diseño <span>·</span> Desarrollo <span>·</span> Automatización
+            </p>
+
+            <a href="#contacto" className="hero-meeting glass-button button-primary mt-4 justify-self-center self-center lg:col-start-2 lg:row-start-3">
+              Agendar una reunión
             </a>
           </div>
-
-          <BrandVideo />
-
-          <a href="#contacto" className="glass-button button-primary mt-4 justify-self-center self-center lg:col-start-2 lg:row-start-3">
-            Agendar una reunión
-          </a>
-
-          <p className="hero-caption glass mt-6 max-w-full justify-self-start rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em] lg:col-start-1 lg:row-start-4">
-            Diseño <span>·</span> Desarrollo <span>·</span> Automatización
-          </p>
-
         </div>
       </section>
 

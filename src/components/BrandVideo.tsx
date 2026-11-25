@@ -31,7 +31,7 @@ export default function BrandVideo() {
           src="/images/futiana.png"
           alt=""
           fill
-          sizes="(min-width: 1024px) min(45vw, 600px), (min-width: 768px) 688px, calc(100vw - 48px)"
+          sizes="(min-width: 1024px) min(42vw, 944px), (min-width: 768px) 688px, calc(100vw - 48px)"
           className="object-cover"
         />
 
