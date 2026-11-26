@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { DM_Sans } from "next/font/google";
-import { useEffect, useRef, useState } from "react";
+import { type MouseEvent, useEffect, useRef, useState } from "react";
 
 const navFont = DM_Sans({ subsets: ["latin"], preload: false });
 
@@ -16,6 +16,13 @@ const items = [
 ];
 
 const desktopItems = [...items.filter((item) => item !== contact), contact];
+
+function BrandLogo() {
+  return (
+    <Image src="/brand/Black%20Futiana-Logo.png" alt="" width={108} height={36}
+      className="h-9 w-[108px] object-contain" />
+  );
+}
 
 export default function Navbar() {
   const [active, setActive] = useState("inicio");
@@ -67,20 +74,19 @@ export default function Navbar() {
     };
   }, []);
 
+  function selectSection(event: MouseEvent<HTMLAnchorElement>, id: string) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (active !== id) destination.current = id;
+    setActive(id);
+  }
+
   function renderLinks(links: typeof items, desktop = false) {
     return links.map(({ id, label, path }) => (
         <a key={id} href={`#${id}`} aria-current={active === id ? "location" : undefined}
           aria-label={id === "contacto" ? label : desktop && id === "inicio" ? "Futiana — inicio" : undefined}
-          onClick={(event) => {
-            if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-            if (active !== id) destination.current = id;
-            setActive(id);
-          }}
+          onClick={(event) => selectSection(event, id)}
           className={id === "contacto" ? "dock-contact" : id === "inicio" ? "dock-home" : "dock-section-link"}>
-          {desktop && id === "inicio" && (
-            <Image src="/brand/Black%20Futiana-Logo.png" alt="" width={108} height={36}
-              className="h-9 w-[108px] object-contain" />
-          )}
+          {desktop && id === "inicio" && <BrandLogo />}
           {(!desktop || id !== "inicio") && (
             <span className="dock-icon">
               <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none"
@@ -97,9 +103,17 @@ export default function Navbar() {
   }
 
   return (
-    <nav aria-label="Navegación principal" className="site-nav glass">
-      <div className="dock-mobile-links">{renderLinks(items)}</div>
-      <div className={`dock-desktop-links ${navFont.className}`}>{renderLinks(desktopItems, true)}</div>
-    </nav>
+    <>
+      <nav aria-label="Inicio de Futiana" className="mobile-brand-nav glass fixed inset-x-0 top-0 z-40 grid place-items-center lg:hidden">
+        <a href="#inicio" aria-label="Volver al inicio de Futiana" className="inline-flex min-h-11 items-center"
+          onClick={(event) => selectSection(event, "inicio")}>
+          <BrandLogo />
+        </a>
+      </nav>
+      <nav aria-label="Navegación principal" className="site-nav glass">
+        <div className="dock-mobile-links">{renderLinks(items)}</div>
+        <div className={`dock-desktop-links ${navFont.className}`}>{renderLinks(desktopItems, true)}</div>
+      </nav>
+    </>
   );
 }

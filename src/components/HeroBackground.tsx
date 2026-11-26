@@ -20,7 +20,7 @@ export default function HeroBackground() {
         style={{ y, scale }}
       >
         <Image
-          src="/images/futiana.png"
+          src="/images/futiana-hero.jpg"
           alt=""
           fill
           sizes="100vw"

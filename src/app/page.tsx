@@ -45,10 +45,6 @@ export default function Home() {
         >
 
           <div className="hero-panel glass grid w-full grid-cols-1 rounded-[2rem] p-3 sm:p-6 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-8 lg:p-8">
-            <p className="hero-label mb-3 max-w-full justify-self-start rounded-full uppercase">
-              Tecnología para la gastronomía
-            </p>
-
             <Reveal className="hero-card glass min-w-0 lg:col-start-1 lg:row-start-2">
               <h1
                 className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
@@ -63,19 +59,9 @@ export default function Home() {
               </p>
             </Reveal>
 
-            <div className="hero-actions mt-4 grid gap-3 p-2 min-[28rem]:flex min-[28rem]:flex-wrap min-[28rem]:justify-self-start lg:col-start-1 lg:row-start-3">
-              <a href="#soluciones" className=" hero-meeting button-primary glass-button glass">
-                Explorar soluciones
-              </a>
-
-              <a href="#nosotros" className="glass-button button-secondary">
-                Conocer futiana
-              </a>
-            </div>
-
             <BrandVideo />
 
-            <p className="hero-label hero-caption w-full rounded-full text-center uppercase">
+            <p className="hero-label hero-caption w-full rounded-full text-center uppercase lg:col-start-2 lg:row-start-1">
               Diseño <span>·</span> Desarrollo <span>·</span> Automatización
             </p>
 

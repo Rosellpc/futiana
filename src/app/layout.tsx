@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   title: "Futiana | Tecnología para la gastronomía",
   description:
     "Diseño, desarrollo de software y automatización para negocios gastronómicos.",
+  openGraph: {
+    title: "Futiana | Tecnología para la gastronomía",
+    description:
+      "Diseño, desarrollo de software y automatización para negocios gastronómicos.",
+    siteName: "Futiana",
+    locale: "es_PE",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

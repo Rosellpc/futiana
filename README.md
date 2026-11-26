@@ -40,8 +40,8 @@ el desarrollo guiado y puede contener pasos todavía no aplicados.
 - `src/app/legal/page.tsx`: borradores de términos y privacidad para Perú.
 - `src/app/actions/contact.ts`: Server Action del formulario.
 - `src/lib/supabase/admin.ts`: cliente privado de Supabase.
-- `public/images/oficina.jpeg`: fondo del hero.
-- `public/images/futiana.jpeg`: imagen de Nosotros.
+- `public/images/futiana-hero.jpg`: fondo del hero y portada del video.
+- `public/images/futiana-nosotros.webp`: imagen de Nosotros.
 
 ## Página principal
 
@@ -79,25 +79,31 @@ Tabla `contact_requests`:
 - `status`: `new`, `contacted`, `closed`
 - `notification_status`: `pending`, `accepted`, `failed`
 - `notification_id`
-- `request_fingerprint`: añadido en la mejora propuesta contra duplicados.
+- `request_fingerprint`: huella usada para detectar consultas duplicadas.
 
 RLS habilitado. Sin acceso directo para `anon` ni `authenticated`.
 El backend utiliza una clave secreta; nunca exponerla al navegador.
 
 `accepted` significa que Resend aceptó el correo, no que se entregó.
 
-## Mejoras entregadas, pendientes de verificar
+## Estado de la protección del formulario
 
-Se proporcionó SQL y código para `submit_contact_request`, una función RPC:
+La acción del formulario ya llama a la función RPC `public.submit_contact_request`
+con los parámetros `p_payload` y `p_fingerprint`. La migración SQL de esa función
+no está incluida en este repositorio y su instalación en Supabase no se ha
+verificado desde aquí. El formulario depende de que exista; sin ella, el guardado
+falla y el visitante conserva los datos para volver a intentarlo.
 
-- Detecta contenido idéntico durante 10 minutos mediante SHA-256.
-- Admite hasta 3 consultas nuevas por correo en 15 minutos.
-- Admite hasta 30 consultas nuevas globales en 15 minutos.
-- Comprueba y guarda dentro de una transacción con advisory lock.
-- Solo `service_role` tiene permiso de ejecución.
+La función debe:
 
-Si está implementada, la acción debe usar `.rpc(...)` y retirar el
-`.insert(...)` anterior. Verificar la migración y probar concurrencia.
+- Detectar contenido idéntico durante 10 minutos mediante SHA-256.
+- Admitir hasta 3 consultas nuevas por correo en 15 minutos.
+- Admitir hasta 30 consultas nuevas globales en 15 minutos.
+- Comprobar y guardar dentro de una transacción con advisory lock.
+- Conceder permiso de ejecución solo a `service_role`.
+
+Antes de publicar, incorporar la migración revisada al repositorio, aplicarla en
+Supabase y comprobar los límites y la deduplicación bajo solicitudes concurrentes.
 
 Estos controles no detienen todas las peticiones ni sustituyen protección
 contra bots. El límite global puede afectar a visitantes legítimos.

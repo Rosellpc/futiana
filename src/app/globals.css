@@ -246,6 +246,7 @@ html:has(.video-lightbox[open]) {
   backdrop-filter: var(--glass-light-filter);
 }
 
+.mobile-brand-nav img,
 .dock-home img {
   filter: var(--glass-logo-filter);
 }
@@ -303,6 +304,23 @@ html:has(.site-nav) {
   scroll-padding-bottom: var(--dock-bottom-space);
 }
 .site-nav ~ footer { padding-bottom: var(--dock-bottom-space); }
+
+@media (width < 64rem) {
+  html:has(.mobile-brand-nav) {
+    --brand-nav-height: calc(3.5rem + env(safe-area-inset-top));
+    scroll-padding-top: var(--brand-nav-height);
+  }
+
+  .mobile-brand-nav {
+    height: var(--brand-nav-height);
+    padding-top: env(safe-area-inset-top);
+    border-width: 0 0 1px;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--brand-nav-height, 0px) + clamp(1.5rem, 4vw, 4rem));
+  }
+}
 
 @media (width >= 64rem) and (hover: hover) and (pointer: fine) {
   html:has(.site-nav) {
@@ -446,6 +464,7 @@ html:has(.site-nav) {
 
 @media (prefers-reduced-transparency: reduce) {
   .glass-button.glass-light,
+  .mobile-brand-nav,
   .site-nav,
   .hero-panel,
   .hero-kicker,

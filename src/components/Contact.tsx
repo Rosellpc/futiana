@@ -3,7 +3,6 @@
 import { useRef, useState, type FormEvent } from "react";
 import Reveal from "@/components/Reveal";
 import { submitContact } from "@/app/actions/contact";
-import Link from "next/link";
 
 const services = [
   "Desarrollo web",

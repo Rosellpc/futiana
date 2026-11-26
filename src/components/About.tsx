@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import { section } from "motion/react-client";
 
 const principles = [
   {
@@ -68,7 +67,7 @@ export default function About() {
                         <figure>
                             <div className="relative isolate aspect-[4/5] overflow-hidden rounded-3xl border border-white/15">
                                 <Image
-                                    src="/images/futiana.png"
+                                    src="/images/futiana-nosotros.webp"
                                     alt="Interior de una oficina de inspiración con mesas de madera y divisiones de cristal."
                                     fill
                                     sizes="(min-width: 1280px) 560px, (min-width: 1024px) 50vw, 100vw"

@@ -16,7 +16,7 @@ export default function BrandVideo() {
   }
 
   return (
-    <figure className="relative mt-4 aspect-video w-full min-w-0 overflow-hidden rounded-[1.75rem] bg-black lg:col-start-2 lg:row-start-2 lg:mt-0 lg:aspect-auto lg:min-h-64 lg:self-stretch">
+    <figure className="relative aspect-video w-full min-w-0 overflow-hidden rounded-[1.75rem] bg-black max-lg:order-first max-lg:mb-4 lg:col-start-2 lg:row-start-2 lg:aspect-auto lg:min-h-64 lg:self-stretch">
       <button
         ref={trigger}
         type="button"
@@ -28,9 +28,10 @@ export default function BrandVideo() {
                    focus-visible:outline-offset-[-6px]"
       >
         <Image
-          src="/images/futiana.png"
+          src="/images/futiana-hero.jpg"
           alt=""
           fill
+          loading="eager"
           sizes="(min-width: 1024px) min(42vw, 944px), (min-width: 768px) 688px, calc(100vw - 48px)"
           className="object-cover"
         />
