@@ -19,7 +19,7 @@ const desktopItems = [...items.filter((item) => item !== contact), contact];
 
 function BrandLogo() {
   return (
-    <Image src="/brand/Black%20Futiana-Logo.png" alt="" width={108} height={36}
+    <Image src="/brand/futiana-blanco.png" alt="" width={108} height={36}
       className="h-9 w-[108px] object-contain" />
   );
 }
