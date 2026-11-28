@@ -44,7 +44,17 @@ export default function Home() {
           className="hero-content mx-auto my-auto grid w-[calc(100%-2rem)] max-w-3xl gap-4 sm:w-[calc(100%-4rem)] lg:max-w-[90rem]"
         >
 
-          <div className="hero-panel glass grid w-full grid-cols-1 rounded-[2rem] p-3 sm:p-6 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-8 lg:p-8">
+          <div className="hero-panel glass grid w-full grid-cols-1 rounded-[2rem] p-3 max-lg:gap-y-4 sm:p-6 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-8 lg:p-8">
+            <BrandVideo />
+
+            <a href="#contacto" className="hero-meeting glass-button button-primary justify-self-center self-center lg:col-start-2 lg:row-start-3 lg:mt-4">
+              Agendar una reunión
+            </a>
+
+            <p className="hero-label hero-caption w-full rounded-full text-center uppercase lg:col-start-2 lg:row-start-1">
+              Diseño <span>·</span> Desarrollo <span>·</span> Automatización
+            </p>
+
             <Reveal className="hero-card glass min-w-0 lg:col-start-1 lg:row-start-2">
               <h1
                 className="hero-title max-w-2xl text-5xl font-semibold leading-[1.02]
@@ -58,16 +68,6 @@ export default function Home() {
                 que conectan tu operación y cuidan cada momento del servicio.
               </p>
             </Reveal>
-
-            <BrandVideo />
-
-            <p className="hero-label hero-caption w-full rounded-full text-center uppercase lg:col-start-2 lg:row-start-1">
-              Diseño <span>·</span> Desarrollo <span>·</span> Automatización
-            </p>
-
-            <a href="#contacto" className="hero-meeting glass-button button-primary mt-4 justify-self-center self-center lg:col-start-2 lg:row-start-3">
-              Agendar una reunión
-            </a>
           </div>
         </div>
       </section>

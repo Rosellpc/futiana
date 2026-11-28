@@ -16,7 +16,7 @@ export default function BrandVideo() {
   }
 
   return (
-    <figure className="relative aspect-video w-full min-w-0 overflow-hidden rounded-[1.75rem] bg-black max-lg:order-first max-lg:mb-4 lg:col-start-2 lg:row-start-2 lg:aspect-auto lg:min-h-64 lg:self-stretch">
+    <figure className="relative aspect-[3/2] w-full min-w-0 overflow-hidden rounded-[1.75rem] bg-black lg:col-start-2 lg:row-start-2 lg:aspect-auto lg:min-h-64 lg:self-stretch">
       <button
         ref={trigger}
         type="button"

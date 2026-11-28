@@ -777,12 +777,16 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-@media (max-width: 640px) {
+@media (width < 40rem) {
   .hero-title {
     max-width: 18ch;
-    font-size: clamp(2.5rem, 9.5vw, 3.75rem);
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 
+  .hero-copy {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
 }
 
 #contacto fieldset:disabled {

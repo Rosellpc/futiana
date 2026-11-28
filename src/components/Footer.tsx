@@ -22,7 +22,7 @@ export default function Footer() {
               className="inline-flex items-center"
             >
               <Image
-                src="/brand/iconp.png"
+                src="/brand/futiana-dorado.png"
                 alt=""
                 width={240}
                 height={80}
